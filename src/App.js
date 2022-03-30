@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react'
+import { Outlet, Route, Routes } from 'react-router-dom';
+import Nav from './components/Nav';
+import MainPage from './pages/Mainpage';
+import DirectMassagePage from './pages/DirectMassagePage';
+import ExplorePage from './pages/ExplorePage';
 
-function App() {
+
+const Layout = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav />
+      <Outlet />
     </div>
-  );
+  )
 }
 
-export default App;
+export default function App() {
+  return (
+    <div className='flex flex-col justify-center items-center w-full h-max bg-gray-50'>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<MainPage />}></Route>
+          <Route path='direct' element={<DirectMassagePage />}></Route>
+          <Route path='explore' element={<ExplorePage />}></Route>
+        </Route>
+      </Routes>
+
+    </div>
+  );
+};

@@ -1,0 +1,40 @@
+.swiper-pagination {
+background-color: white;
+padding: 5px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: 0px;
+}
+
+.swiper-pagination-bullet{
+    transform: scale(0.7);
+
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0 1px;
+}
+
+.swiper{
+    height: 100%;
+    z-index: 1;
+}
+
+.save{
+    position: absolute;
+    right: 0px;
+}
+
+span{
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+textarea {
+    overflow: hidden;
+    vertical-align: top;
+    resize: none;
+    height: 18px;
+}

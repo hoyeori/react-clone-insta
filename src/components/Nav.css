@@ -1,0 +1,15 @@
+.likeBox{
+    transition: all 0.1s linear;
+}
+
+.userBox{
+    transition: all 0.1s linear;
+}
+
+.block{
+    cursor: pointer;
+}
+
+.uploadBox{
+        transition: all 0.1s linear;
+}
